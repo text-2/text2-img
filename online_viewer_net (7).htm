@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text2 Magic - Icon Grid</title>
+    <!-- Tải Tailwind CSS cho phong cách hiện đại và responsive -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tùy chỉnh font Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* Màu nền tối */
+            color: #e2e8f0; /* Màu chữ sáng */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Đảm bảo chiều cao tối thiểu cho toàn màn hình */
+            padding: 20px; /* Thêm padding tổng thể */
+            box-sizing: border-box;
+        }
+
+        .icon-container {
+            /* Hiệu ứng nổi lên khi hover */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative; /* Dùng để định vị hiệu ứng lấp lánh */
+            overflow: hidden; /* Che đi phần lấp lánh thừa */
+        }
+
+        .icon-container:hover {
+            transform: translateY(-8px); /* Nổi lên */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Thêm bóng */
+        }
+
+        .sparkle-effect {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            opacity: 0;
+            transform: scale(0);
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            pointer-events: none; /* Đảm bảo không cản trở sự kiện click */
+        }
+
+        .icon-container:hover .sparkle-effect {
+            opacity: 1;
+            transform: scale(1.5); /* Phóng to hiệu ứng lấp lánh */
+        }
+
+        .icon-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Đảm bảo hình ảnh vừa vặn và không bị méo */
+            border-radius: inherit; /* Kế thừa border-radius từ cha */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 drop-shadow-lg animate-pulse">
+        Text2 Magic img
+    </h1>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 md:gap-10 max-w-6xl w-full">
+        <!-- Icon mẫu 1: Tạo QR code -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr" data-icon-src="https://placehold.co/100x100/A78BFA/ffffff?text=QR">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/A78BFA/ffffff?text=QR" alt="QR Icon" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 2: Tạo thumbnail -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/thumbnail" data-icon-src="https://placehold.co/100x100/FDBA74/ffffff?text=Thumb">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/FDBA74/ffffff?text=Thumb" alt="Thumbnail Icon" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo thumbnail</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 3: Tạo QR code -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr-2" data-icon-src="https://placehold.co/100x100/93C5FD/ffffff?text=QR2">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/93C5FD/ffffff?text=QR2" alt="QR Icon 2" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 4: Tạo thumbnail -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/thumbnail-2" data-icon-src="https://placehold.co/100x100/6EE7B7/ffffff?text=Thumb2">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/6EE7B7/ffffff?text=Thumb2" alt="Thumbnail Icon 2" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo thumbnail</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 5: Tạo QR code -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr-3" data-icon-src="https://placehold.co/100x100/D8B4FE/ffffff?text=QR3">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/D8B4FE/ffffff?text=QR3" alt="QR Icon 3" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 6: Tạo QR code (hàng 2) -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr-4" data-icon-src="https://placehold.co/100x100/81C784/ffffff?text=QR4">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/81C784/ffffff?text=QR4" alt="QR Icon 4" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 7: Tạo thumbnail (hàng 2) -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/thumbnail-3" data-icon-src="https://placehold.co/100x100/FFB74D/ffffff?text=Thumb3">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/FFB74D/ffffff?text=Thumb3" alt="Thumbnail Icon 3" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo thumbnail</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 8: Tạo QR code (hàng 2) -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr-5" data-icon-src="https://placehold.co/100x100/A0DA8E/ffffff?text=QR5">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/A0DA8E/ffffff?text=QR5" alt="QR Icon 5" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 9: Tạo thumbnail (hàng 2) -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/thumbnail-4" data-icon-src="https://placehold.co/100x100/FF8A65/ffffff?text=Thumb4">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/FF8A65/ffffff?text=Thumb4" alt="Thumbnail Icon 4" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo thumbnail</p>
+            <div class="sparkle-effect"></div>
+        </div>
+
+        <!-- Icon mẫu 10: Tạo QR code (hàng 2) -->
+        <div class="icon-container bg-blue-600 rounded-2xl p-4 flex flex-col items-center justify-center shadow-lg hover:bg-blue-700"
+             data-link="https://hnhata.github.io/qr-6" data-icon-src="https://placehold.co/100x100/4DB6AC/ffffff?text=QR6">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mb-3 rounded-xl overflow-hidden">
+                <img src="https://placehold.co/100x100/4DB6AC/ffffff?text=QR6" alt="QR Icon 6" class="icon-img">
+            </div>
+            <p class="text-sm sm:text-base font-semibold text-center mt-2">Tạo QR code</p>
+            <div class="sparkle-effect"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lấy tất cả các icon container
+            const iconContainers = document.querySelectorAll('.icon-container');
+
+            iconContainers.forEach(container => {
+                // Lắng nghe sự kiện click trên mỗi icon container
+                container.addEventListener('click', function() {
+                    // Lấy đường link từ thuộc tính data-link
+                    const link = this.dataset.link;
+                    if (link) {
+                        window.open(link, '_blank'); // Mở link trong tab mới
+                    }
+                });
+
+                // Lắng nghe sự kiện mouseenter để kích hoạt hiệu ứng lấp lánh (nếu cần JS)
+                // Hiện tại hiệu ứng lấp lánh đã được xử lý bằng CSS hover
+            });
+        });
+    </script>
+</body>
+</html>
